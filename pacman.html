@@ -23,8 +23,8 @@
     <script type="text/javascript">
         
         
-
-    var game = new Phaser.Game(448, 496, Phaser.AUTO);
+//auksisi ton diastasewn tou game gia na xwresei to score//
+    var game = new Phaser.Game(550, 600, Phaser.AUTO);
 
     var Pacman = function (game) {
 
@@ -46,7 +46,7 @@
 
         this.current = Phaser.NONE;
         this.turning = Phaser.NONE;
-        
+        //prosthiki score//
         this.score=0;
         this.scoreText='';
 
@@ -115,7 +115,7 @@
             
             
             //vazontas to score//
-            this.scoreText = game.add.text(0, 448, 'Score: 0', { fontSize: '34px Arial', fill: 'yellow' });
+            this.scoreText = game.add.text(0, 550, 'Score: 0', { fontSize: '34px Arial', fill: 'yellow' });
             
 
         },
