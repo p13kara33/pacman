@@ -74,7 +74,7 @@
             this.load.crossOrigin = 'anonymous';
 
             this.load.image('dot', 'assets/dot.png');
-            this.load.image('dot', 'assets/bonus-coin.png');
+            this.load.image('bonuscoin', 'assets/bonuscoin.png');
             this.load.image('tiles', 'assets/pacman-tiles.png');
             this.load.spritesheet('pacman', 'assets/pacman.png', 32, 32);
             this.load.tilemap('map', 'assets/pacman-map.json', null, Phaser.Tilemap.TILED_JSON);
@@ -260,11 +260,11 @@
         
         
         
-        eatBonus: function (pacman, bonus-coin) {
+        eatBonuscoin: function (pacman, bonuscoin) {
 
-            bonus-coin.kill();
+            bonuscoin.kill();
             //prosthiki ixou otan "trwei" ta bonuscoin//
-            var audio = new Audio('assets/Bonus-sound.mp3');
+            var audio = new Audio('assets/Bonussound.mp3');
              audio.play()
            
             
