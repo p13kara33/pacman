@@ -41,11 +41,11 @@
         {
          "columns":22,
          "firstgid":1,
-         "image":"\u039a\u03b1\u03c4\u03b1\u03b3\u03c1\u03b1\u03c6\u03ae.png",
+         "image":"new-tileset.png",
          "imageheight":320,
          "imagewidth":637,
          "margin":0,
-         "name":"\u039a\u03b1\u03c4\u03b1\u03b3\u03c1\u03b1\u03c6\u03ae",
+         "name":"new-tileset",
          "spacing":0,
          "tilecount":220,
          "tileheight":31,
