@@ -74,7 +74,7 @@
             this.load.crossOrigin = 'anonymous';
 
             this.load.image('dot', 'assets/dot.png');
-            this.load.image('bonuscoin', 'assets/bonuscoin.png');
+            //this.load.image('bonuscoin', 'assets/bonuscoin.png');
             this.load.image('tiles', 'assets/pacman-tiles.png');
             this.load.spritesheet('pacman', 'assets/pacman.png', 32, 32);
             this.load.tilemap('map', 'assets/pacman-map.json', null, Phaser.Tilemap.TILED_JSON);
@@ -94,7 +94,7 @@
 
             this.map.createFromTiles(7, this.safetile, 'dot', this.layer, this.dots);
             //prosthesi bonus coin sto map//
-            this.map.createFromTiles(32, this.safetile, 'bonuscoin', this.layer, this.dots);
+           // this.map.createFromTiles(32, this.safetile, 'bonuscoin', this.layer, this.dots);
 
             //  The dots will need to be offset by 6px to put them back in the middle of the grid
             this.dots.setAll('x', 6, false, false, 1);
@@ -274,19 +274,19 @@
         
         
         
-        eatBonuscoin: function (pacman, bonuscoin) {
+        //eatBonuscoin: function (pacman, bonuscoin) {
 
-            bonuscoin.kill();
+            //bonuscoin.kill();
             //prosthiki ixou otan "trwei" ta bonuscoin//
-            var audio = new Audio('assets/Bonussound.mp3');
-             audio.play()
+           // var audio = new Audio('assets/Bonussound.mp3');
+             //audio.play()
            
             
             //prosthesi sto score //
-            this.score+=200;
+            //this.score+=200;
             //auksisi toy score otan trwei mia bonus koykida//
-            this.scoreText.text= 'Score: ' + this.score;
-        }
+           // this.scoreText.text= 'Score: ' + this.score;
+       // }
         
         
         
