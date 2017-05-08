@@ -74,6 +74,7 @@
             this.load.crossOrigin = 'anonymous';
 
             this.load.image('dot', 'assets/dot.png');
+            this.load.image('dot', 'assets/bonus-coin.png');
             this.load.image('tiles', 'assets/pacman-tiles.png');
             this.load.spritesheet('pacman', 'assets/pacman.png', 32, 32);
             this.load.tilemap('map', 'assets/pacman-map.json', null, Phaser.Tilemap.TILED_JSON);
@@ -114,10 +115,13 @@
             this.move(Phaser.LEFT);
             
             
-            //vazontas to score//
+            //emfanisi tou score stin thesi 0:500 se kitrino xrwma & arxikopoiish tou //
             this.scoreText = game.add.text(0, 550, 'Score: 0', { fontSize: '34px Arial', fill: 'yellow' });
             
 
+            
+            
+            
         },
 
         checkKeys: function () {
@@ -253,7 +257,25 @@
             }
 
         },
+        
+        
+        
+        eatBonus: function (pacman, bonus-coin) {
 
+            bonus-coin.kill();
+            //prosthiki ixou otan "trwei" ta bonuscoin//
+            var audio = new Audio('assets/Bonus-sound.mp3');
+             audio.play()
+           
+            
+            //prosthesi sto score //
+            this.score+=200;
+            //auksisi toy score otan trwei mia bonus koykida//
+            this.scoreText.text= 'Score: ' + this.score;
+        }
+        
+        
+        
         update: function () {
           
             this.physics.arcade.collide(this.pacman, this.layer);
