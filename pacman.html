@@ -75,9 +75,9 @@
 
             this.load.image('dot', 'assets/dot.png');
             this.load.image('bonuscoin', 'assets/bonuscoin.png');
-            this.load.image('tiles', 'assets/new-tileset.png');
+            this.load.image('tiles', 'assets/pacman-tiles.png');
             this.load.spritesheet('pacman', 'assets/pacman.png', 32, 32);
-            this.load.tilemap('map', 'assets/new-map.json', null, Phaser.Tilemap.TILED_JSON);
+            this.load.tilemap('map', 'assets/pacman-map.json', null, Phaser.Tilemap.TILED_JSON);
 
             //  Needless to say, graphics (C)opyright Namco
 
@@ -86,7 +86,7 @@
         create: function () {
 
             this.map = this.add.tilemap('map');
-            this.map.addTilesetImage('new-tileset', 'tiles');
+            this.map.addTilesetImage('pacman-tiles', 'tiles');
 
             this.layer = this.map.createLayer('Pacman');
 
